@@ -25,17 +25,18 @@
     </typeDescription>
     <typeDescription>
       <name>cmu11791.rcarlson.Question</name>
-      <description/>
+      <description>every Question has some set of text features that can be analyzed, and a set of candidate answers
+</description>
       <supertypeName>cmu11791.rcarlson.SourceConfidenceAnnotation</supertypeName>
     <features>
         <featureDescription>
           <name>questionTextFeatures</name>
-          <description/>
+          <description>text features (text, ngrams) characterizing the question</description>
           <rangeTypeName>cmu11791.rcarlson.TextFeatures</rangeTypeName>
           </featureDescription>
       <featureDescription>
           <name>Answers</name>
-          <description/>
+          <description>list of scored Answers to the Question</description>
           <rangeTypeName>uima.cas.FSList</rangeTypeName>
           <elementType>cmu11791.rcarlson.Answer</elementType>
           <multipleReferencesAllowed>false</multipleReferencesAllowed>
@@ -44,39 +45,39 @@
     </typeDescription>
     <typeDescription>
       <name>cmu11791.rcarlson.Answer</name>
-      <description/>
+      <description>every Answer must be assigned a score, based on its text features</description>
       <supertypeName>cmu11791.rcarlson.SourceConfidenceAnnotation</supertypeName>
       <features>
         <featureDescription>
           <name>score</name>
-          <description/>
+          <description>score assigned to an Answer relative to a Question</description>
           <rangeTypeName>uima.cas.Double</rangeTypeName>
         </featureDescription>
         <featureDescription>
           <name>answerTextFeatures</name>
-          <description/>
+          <description>text features (text, ngrams) characterizing the answer</description>
           <rangeTypeName>cmu11791.rcarlson.TextFeatures</rangeTypeName>
         </featureDescription>
       </features>
     </typeDescription>
     <typeDescription>
       <name>cmu11791.rcarlson.NGram</name>
-      <description/>
+      <description>A generic NGram, which knows about its tokens and where in the text it starts and ends</description>
       <supertypeName>cmu11791.rcarlson.SourceConfidenceAnnotation</supertypeName>
       <features>
         <featureDescription>
           <name>startIndex</name>
-          <description/>
+          <description>start location of the ngram in the text</description>
           <rangeTypeName>uima.cas.Integer</rangeTypeName>
         </featureDescription>
         <featureDescription>
           <name>endIndex</name>
-          <description/>
+          <description>end location of the ngram in the text</description>
           <rangeTypeName>uima.cas.Integer</rangeTypeName>
         </featureDescription>
         <featureDescription>
           <name>tokens</name>
-          <description/>
+          <description>list of tokenized text, the cardinality of which determines N</description>
           <rangeTypeName>uima.cas.FSList</rangeTypeName>
           <elementType>uima.cas.StringArray</elementType>
           <multipleReferencesAllowed>false</multipleReferencesAllowed>
@@ -85,33 +86,33 @@
     </typeDescription>
     <typeDescription>
       <name>cmu11791.rcarlson.TextFeatures</name>
-      <description/>
+      <description>TextFeatures include the base text as well as unigrams, bigrams, and trigrams that help characterize the text</description>
       <supertypeName>cmu11791.rcarlson.SourceConfidenceAnnotation</supertypeName>
       <features>
         <featureDescription>
           <name>unigrams</name>
-          <description/>
+          <description>single tokens (N=1)</description>
           <rangeTypeName>uima.cas.FSList</rangeTypeName>
           <elementType>cmu11791.rcarlson.NGram</elementType>
           <multipleReferencesAllowed>false</multipleReferencesAllowed>
         </featureDescription>
         <featureDescription>
           <name>bigrams</name>
-          <description/>
+          <description>token couples (N=2)</description>
           <rangeTypeName>uima.cas.FSList</rangeTypeName>
           <elementType>cmu11791.rcarlson.NGram</elementType>
           <multipleReferencesAllowed>false</multipleReferencesAllowed>
         </featureDescription>
         <featureDescription>
           <name>trigrams</name>
-          <description/>
+          <description>token triples (N=3)</description>
           <rangeTypeName>uima.cas.FSList</rangeTypeName>
           <elementType>cmu11791.rcarlson.NGram</elementType>
           <multipleReferencesAllowed>false</multipleReferencesAllowed>
         </featureDescription>
         <featureDescription>
           <name>text</name>
-          <description/>
+          <description>the raw text from which the NGrams are extracted</description>
           <rangeTypeName>uima.cas.String</rangeTypeName>
         </featureDescription>
       </features>
