@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** A generic NGram, which knows about its tokens and where in the text it starts and ends
- * Updated by JCasGen Wed Sep 11 17:28:07 EDT 2013
+ * Updated by JCasGen Wed Sep 11 22:48:16 EDT 2013
  * @generated */
 public class NGram_Type extends SourceConfidenceAnnotation_Type {
   /** @generated */
@@ -114,7 +114,7 @@ public class NGram_Type extends SourceConfidenceAnnotation_Type {
     casFeatCode_endIndex  = (null == casFeat_endIndex) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_endIndex).getCode();
 
  
-    casFeat_tokens = jcas.getRequiredFeatureDE(casType, "tokens", "uima.cas.FSList", featOkTst);
+    casFeat_tokens = jcas.getRequiredFeatureDE(casType, "tokens", "uima.cas.StringList", featOkTst);
     casFeatCode_tokens  = (null == casFeat_tokens) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_tokens).getCode();
 
   }

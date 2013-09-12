@@ -10,8 +10,11 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import org.apache.uima.jcas.cas.FSList;
 
 
+import org.apache.uima.jcas.cas.StringList;
+
+
 /** TextFeatures include the base text as well as unigrams, bigrams, and trigrams that help characterize the text
- * Updated by JCasGen Wed Sep 11 17:28:07 EDT 2013
+ * Updated by JCasGen Wed Sep 11 22:48:16 EDT 2013
  * XML source: /Users/rcarlson/local/eclipse-workspaces/software-engineering/cmu11791-hw1-rcarlson/hw1-rcarlson/src/main/resources/hw1-rcarlson-typesystem.xml
  * @generated */
 public class TextFeatures extends SourceConfidenceAnnotation {
@@ -132,6 +135,24 @@ public class TextFeatures extends SourceConfidenceAnnotation {
     if (TextFeatures_Type.featOkTst && ((TextFeatures_Type)jcasType).casFeat_text == null)
       jcasType.jcas.throwFeatMissing("text", "cmu11791.rcarlson.TextFeatures");
     jcasType.ll_cas.ll_setStringValue(addr, ((TextFeatures_Type)jcasType).casFeatCode_text, v);}    
+   
+    
+  //*--------------*
+  //* Feature: allTokens
+
+  /** getter for allTokens - gets a list of all tokens, which might be different from other NGram features (e.g., unigram features might exclude punctuation)
+   * @generated */
+  public StringList getAllTokens() {
+    if (TextFeatures_Type.featOkTst && ((TextFeatures_Type)jcasType).casFeat_allTokens == null)
+      jcasType.jcas.throwFeatMissing("allTokens", "cmu11791.rcarlson.TextFeatures");
+    return (StringList)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((TextFeatures_Type)jcasType).casFeatCode_allTokens)));}
+    
+  /** setter for allTokens - sets a list of all tokens, which might be different from other NGram features (e.g., unigram features might exclude punctuation) 
+   * @generated */
+  public void setAllTokens(StringList v) {
+    if (TextFeatures_Type.featOkTst && ((TextFeatures_Type)jcasType).casFeat_allTokens == null)
+      jcasType.jcas.throwFeatMissing("allTokens", "cmu11791.rcarlson.TextFeatures");
+    jcasType.ll_cas.ll_setRefValue(addr, ((TextFeatures_Type)jcasType).casFeatCode_allTokens, jcasType.ll_cas.ll_getFSRef(v));}    
   }
 
     

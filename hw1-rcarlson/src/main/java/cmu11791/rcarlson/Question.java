@@ -11,8 +11,7 @@ import org.apache.uima.jcas.cas.FSList;
 
 
 /** every Question has some set of text features that can be analyzed, and a set of candidate answers
-
- * Updated by JCasGen Wed Sep 11 17:28:07 EDT 2013
+ * Updated by JCasGen Wed Sep 11 22:48:16 EDT 2013
  * XML source: /Users/rcarlson/local/eclipse-workspaces/software-engineering/cmu11791-hw1-rcarlson/hw1-rcarlson/src/main/resources/hw1-rcarlson-typesystem.xml
  * @generated */
 public class Question extends SourceConfidenceAnnotation {

@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** every Answer must be assigned a score, based on its text features
- * Updated by JCasGen Wed Sep 11 17:28:07 EDT 2013
+ * Updated by JCasGen Wed Sep 11 22:48:16 EDT 2013
  * @generated */
 public class Answer_Type extends SourceConfidenceAnnotation_Type {
   /** @generated */
@@ -78,6 +78,24 @@ public class Answer_Type extends SourceConfidenceAnnotation_Type {
     ll_cas.ll_setRefValue(addr, casFeatCode_answerTextFeatures, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_isCorrect;
+  /** @generated */
+  final int     casFeatCode_isCorrect;
+  /** @generated */ 
+  public int getIsCorrect(int addr) {
+        if (featOkTst && casFeat_isCorrect == null)
+      jcas.throwFeatMissing("isCorrect", "cmu11791.rcarlson.Answer");
+    return ll_cas.ll_getIntValue(addr, casFeatCode_isCorrect);
+  }
+  /** @generated */    
+  public void setIsCorrect(int addr, int v) {
+        if (featOkTst && casFeat_isCorrect == null)
+      jcas.throwFeatMissing("isCorrect", "cmu11791.rcarlson.Answer");
+    ll_cas.ll_setIntValue(addr, casFeatCode_isCorrect, v);}
+    
+  
 
 
 
@@ -94,6 +112,10 @@ public class Answer_Type extends SourceConfidenceAnnotation_Type {
  
     casFeat_answerTextFeatures = jcas.getRequiredFeatureDE(casType, "answerTextFeatures", "cmu11791.rcarlson.TextFeatures", featOkTst);
     casFeatCode_answerTextFeatures  = (null == casFeat_answerTextFeatures) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_answerTextFeatures).getCode();
+
+ 
+    casFeat_isCorrect = jcas.getRequiredFeatureDE(casType, "isCorrect", "uima.cas.Integer", featOkTst);
+    casFeatCode_isCorrect  = (null == casFeat_isCorrect) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_isCorrect).getCode();
 
   }
 }

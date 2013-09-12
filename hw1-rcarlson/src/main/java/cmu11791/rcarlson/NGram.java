@@ -7,11 +7,14 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
+import org.apache.uima.jcas.cas.StringList;
+
+
 import org.apache.uima.jcas.cas.FSList;
 
 
 /** A generic NGram, which knows about its tokens and where in the text it starts and ends
- * Updated by JCasGen Wed Sep 11 17:28:07 EDT 2013
+ * Updated by JCasGen Wed Sep 11 22:48:16 EDT 2013
  * XML source: /Users/rcarlson/local/eclipse-workspaces/software-engineering/cmu11791-hw1-rcarlson/hw1-rcarlson/src/main/resources/hw1-rcarlson-typesystem.xml
  * @generated */
 public class NGram extends SourceConfidenceAnnotation {
@@ -103,14 +106,14 @@ public class NGram extends SourceConfidenceAnnotation {
 
   /** getter for tokens - gets list of tokenized text, the cardinality of which determines N
    * @generated */
-  public FSList getTokens() {
+  public StringList getTokens() {
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_tokens == null)
       jcasType.jcas.throwFeatMissing("tokens", "cmu11791.rcarlson.NGram");
-    return (FSList)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_tokens)));}
+    return (StringList)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_tokens)));}
     
   /** setter for tokens - sets list of tokenized text, the cardinality of which determines N 
    * @generated */
-  public void setTokens(FSList v) {
+  public void setTokens(StringList v) {
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_tokens == null)
       jcasType.jcas.throwFeatMissing("tokens", "cmu11791.rcarlson.NGram");
     jcasType.ll_cas.ll_setRefValue(addr, ((NGram_Type)jcasType).casFeatCode_tokens, jcasType.ll_cas.ll_getFSRef(v));}    

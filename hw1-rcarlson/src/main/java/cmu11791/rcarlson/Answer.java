@@ -10,7 +10,7 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** every Answer must be assigned a score, based on its text features
- * Updated by JCasGen Wed Sep 11 17:28:07 EDT 2013
+ * Updated by JCasGen Wed Sep 11 22:48:16 EDT 2013
  * XML source: /Users/rcarlson/local/eclipse-workspaces/software-engineering/cmu11791-hw1-rcarlson/hw1-rcarlson/src/main/resources/hw1-rcarlson-typesystem.xml
  * @generated */
 public class Answer extends SourceConfidenceAnnotation {
@@ -95,6 +95,24 @@ public class Answer extends SourceConfidenceAnnotation {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_answerTextFeatures == null)
       jcasType.jcas.throwFeatMissing("answerTextFeatures", "cmu11791.rcarlson.Answer");
     jcasType.ll_cas.ll_setRefValue(addr, ((Answer_Type)jcasType).casFeatCode_answerTextFeatures, jcasType.ll_cas.ll_getFSRef(v));}    
+   
+    
+  //*--------------*
+  //* Feature: isCorrect
+
+  /** getter for isCorrect - gets 1 if the answer is correct, 0 if the answer is incorrect, -1 if the correctness is unkown
+   * @generated */
+  public int getIsCorrect() {
+    if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_isCorrect == null)
+      jcasType.jcas.throwFeatMissing("isCorrect", "cmu11791.rcarlson.Answer");
+    return jcasType.ll_cas.ll_getIntValue(addr, ((Answer_Type)jcasType).casFeatCode_isCorrect);}
+    
+  /** setter for isCorrect - sets 1 if the answer is correct, 0 if the answer is incorrect, -1 if the correctness is unkown 
+   * @generated */
+  public void setIsCorrect(int v) {
+    if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_isCorrect == null)
+      jcasType.jcas.throwFeatMissing("isCorrect", "cmu11791.rcarlson.Answer");
+    jcasType.ll_cas.ll_setIntValue(addr, ((Answer_Type)jcasType).casFeatCode_isCorrect, v);}    
   }
 
     

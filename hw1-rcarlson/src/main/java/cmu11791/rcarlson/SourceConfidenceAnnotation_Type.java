@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** Superclass of all annotations, contains source and confidence score
- * Updated by JCasGen Wed Sep 11 17:28:07 EDT 2013
+ * Updated by JCasGen Wed Sep 11 22:48:16 EDT 2013
  * @generated */
 public class SourceConfidenceAnnotation_Type extends Annotation_Type {
   /** @generated */

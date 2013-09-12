@@ -13,8 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** every Question has some set of text features that can be analyzed, and a set of candidate answers
-
- * Updated by JCasGen Wed Sep 11 17:28:07 EDT 2013
+ * Updated by JCasGen Wed Sep 11 22:48:16 EDT 2013
  * @generated */
 public class Question_Type extends SourceConfidenceAnnotation_Type {
   /** @generated */

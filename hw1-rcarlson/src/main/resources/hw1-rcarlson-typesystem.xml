@@ -25,8 +25,7 @@
     </typeDescription>
     <typeDescription>
       <name>cmu11791.rcarlson.Question</name>
-      <description>every Question has some set of text features that can be analyzed, and a set of candidate answers
-</description>
+      <description>every Question has some set of text features that can be analyzed, and a set of candidate answers</description>
       <supertypeName>cmu11791.rcarlson.SourceConfidenceAnnotation</supertypeName>
     <features>
         <featureDescription>
@@ -58,6 +57,11 @@
           <description>text features (text, ngrams) characterizing the answer</description>
           <rangeTypeName>cmu11791.rcarlson.TextFeatures</rangeTypeName>
         </featureDescription>
+        <featureDescription>
+          <name>isCorrect</name>
+          <description>1 if the answer is correct, 0 if the answer is incorrect, -1 if the correctness is unkown</description>
+          <rangeTypeName>uima.cas.Integer</rangeTypeName>
+        </featureDescription>
       </features>
     </typeDescription>
     <typeDescription>
@@ -78,8 +82,7 @@
         <featureDescription>
           <name>tokens</name>
           <description>list of tokenized text, the cardinality of which determines N</description>
-          <rangeTypeName>uima.cas.FSList</rangeTypeName>
-          <elementType>uima.cas.StringArray</elementType>
+          <rangeTypeName>uima.cas.StringList</rangeTypeName>
           <multipleReferencesAllowed>false</multipleReferencesAllowed>
         </featureDescription>
       </features>
@@ -114,6 +117,12 @@
           <name>text</name>
           <description>the raw text from which the NGrams are extracted</description>
           <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>allTokens</name>
+          <description>a list of all tokens, which might be different from other NGram features (e.g., unigram features might exclude punctuation)</description>
+          <rangeTypeName>uima.cas.StringList</rangeTypeName>
+          <multipleReferencesAllowed>false</multipleReferencesAllowed>
         </featureDescription>
       </features>
     </typeDescription>

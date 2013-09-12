@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** TextFeatures include the base text as well as unigrams, bigrams, and trigrams that help characterize the text
- * Updated by JCasGen Wed Sep 11 17:28:07 EDT 2013
+ * Updated by JCasGen Wed Sep 11 22:48:16 EDT 2013
  * @generated */
 public class TextFeatures_Type extends SourceConfidenceAnnotation_Type {
   /** @generated */
@@ -114,6 +114,24 @@ public class TextFeatures_Type extends SourceConfidenceAnnotation_Type {
     ll_cas.ll_setStringValue(addr, casFeatCode_text, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_allTokens;
+  /** @generated */
+  final int     casFeatCode_allTokens;
+  /** @generated */ 
+  public int getAllTokens(int addr) {
+        if (featOkTst && casFeat_allTokens == null)
+      jcas.throwFeatMissing("allTokens", "cmu11791.rcarlson.TextFeatures");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_allTokens);
+  }
+  /** @generated */    
+  public void setAllTokens(int addr, int v) {
+        if (featOkTst && casFeat_allTokens == null)
+      jcas.throwFeatMissing("allTokens", "cmu11791.rcarlson.TextFeatures");
+    ll_cas.ll_setRefValue(addr, casFeatCode_allTokens, v);}
+    
+  
 
 
 
@@ -138,6 +156,10 @@ public class TextFeatures_Type extends SourceConfidenceAnnotation_Type {
  
     casFeat_text = jcas.getRequiredFeatureDE(casType, "text", "uima.cas.String", featOkTst);
     casFeatCode_text  = (null == casFeat_text) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_text).getCode();
+
+ 
+    casFeat_allTokens = jcas.getRequiredFeatureDE(casType, "allTokens", "uima.cas.StringList", featOkTst);
+    casFeatCode_allTokens  = (null == casFeat_allTokens) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_allTokens).getCode();
 
   }
 }
